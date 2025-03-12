@@ -43,6 +43,7 @@
         .hero img {
             width: 50%;
         }
+
         .cta {
             background: #88B04B;
             color: white;
@@ -50,17 +51,50 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, rgb(28, 128, 26) , rgb(194, 194, 59));
         }
         .icons {
             display: flex;
             justify-content: space-around;
             padding: 20px;
-            background: #f8f8f8;
+            background: #ffffff;
         }
         .icon {
             text-align: center;
             width: 20%;
+        }
+        .slider-container {
+            position: relative;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .slider {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+        }
+        .slider a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #6a6a6a;
+        }
+        .slider a.active {
+            text-decoration: underline;
+        }
+        .slider-indicator {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 10px;
+            background: rgb(255, 255, 255);
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
         }
     </style>
 </head>
@@ -80,7 +114,18 @@
             <p>Nam in sollicitudin</p>
             <a href="#" class="cta">Praesent vel erat</a>
         </div>
-        <img src="maupazfajkom.png" alt="maupka co pali fajke">
+        <img src="images/maupazfajkom.jpg" alt="maupka co pali fajke">
+    </div>
+    <div class="slider-container">
+        <div class="slider">
+            <a href="#" class="slider-item">Mauris convallis ex felis</a>
+            <a href="#" class="slider-item">Curabitur sed sem</a>
+            <a href="#" class="slider-item active">Morbi commodo pharetra</a>
+            <a href="#" class="slider-item">Cras efficitur aliquet</a>
+            <a href="#" class="slider-item">Nam pretium tellus turpis</a>
+            <a href="#" class="slider-item">Etiam nec</a>
+        </div>
+        <div class="slider-indicator"></div>
     </div>
     <div class="icons">
         <div class="icon">
@@ -97,5 +142,276 @@
         </div>
     </div>
 </body>
+</html>
+<html>
+
+	<head>
+		<title>Strona główna</title>
+		<!-- head - informacje dla przeglądarki, skrypty, style -->
+		<meta charset="UTF-8">
+		
+		<style>
+		/* style z W3 - start */
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+		
+		/*style z W3 - stop */
+		
+		
+			* {
+				margin: 0;
+			}
+		
+			.bg-green {
+				background-color: #6ab926;
+				color: #fff;
+				padding: 10px;
+				text-align: center;
+				font-family: sans-serif;
+				font-size: 10px;
+			}
+			
+			#info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100vw;
+    min-height: 25px;
+}
+			
+#nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 20px;
+	column-gap: 20px;
+	overflow-x: auto;
+}
+
+#nav > div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    column-gap: 20px;
+}
+			
+			body {
+				min-height: 200vh;
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<header>
+			<div id="info" class="bg-green">Curabitur ac felis arcu. Sed euismod, urna eu tincidunt consectetur, nisi nisl lacinia mi, <strong>a tincidunt nisi nisl sit amet urna</strong></div>
+			
+			<div id="nav">
+			  <div>
+			    <div>
+			      <a href="tel:500600700">500600700</a>
+			    </div>
+			    <div>
+			      <a href="mailto:mail@example.com">mail@example.com</a>
+			    </div>
+			  </div>
+			  <div>
+			    <div>
+			      <a href="https://www.google.pl/" target="_blank">Google</a>
+			    </div>
+				<div>
+			      <a href="https://synergia.librus.pl/interfejs_lekcyjny" target="_blank">Librus</a>
+			    </div>
+			  </div>
+			</div>
+			
+			
+			<div id="main-slider">
+			  <h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_5terre_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+			</div>
+		</header>
+	</body>
 
 </html>
